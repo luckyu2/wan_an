@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./images/icons96.png"/>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>good evening🌙</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/beautiful-scrollbar.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="bg"></canvas>
+        
+        <span class="setup active"></span>
+        
+        <nav id="menu" class="visible">
+            <div class="row">
+                <div class="col"><span class="icon icon-volume"></span></div>
+                <div class="col"></div>
+                <div class="col"><span class="icon icon-list"></span></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"><span class="icon icon-logo"></span></div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span class="icon icon-timer"></span>
+                    <section class="timer"><span class="minute">30</span>:<span class="second">00</span></section>
+                </div>
+                <div class="col"></div>
+                <div class="col"><span class="icon icon-exit"></span></div>
+            </div>
+            
+            <div class="line-group">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+                <div class="line-4"></div>
+            </div>
+        </nav>
+
+        <section class="side-bar">
+            
+            <div class="mask"></div>
+
+            <ul id="sound-list">
+                <li data-sound="rain">
+                    <div class="sound-icon">
+                        <span class="icon icon-rain"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">雨声</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://music.163.com/song/media/outer/url?id=1314987832.mp3">
+                        <source type="audio/mpeg" src="https://m10.music.126.net/20230405222938/ecb2cebb0f50712d261144fe673561af/ymusic/a4eb/0a35/5c73/9cc26199d666543c14db5e263c4b0b53.mp3">
+                       
+                    </audio>
+                </li>
+
+                <li data-sound="thunder">
+                    <div class="sound-icon">
+                        <span class="icon icon-thunder"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">雷声</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://music.163.com/song/media/outer/url?id=1931497585.mp3">
+                        <source type="audio/mpeg" src="https://m701.music.126.net/20230405212825/5c6b97c2fff69736e8c07d259309ab24/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/13611011899/d2ba/02ba/bb25/db37b59c84ad0088fad1f1c7925183db.mp3">
+                    </audio>
+                </li>
+                
+                <li data-sound="farm">
+                    <div class="sound-icon">
+                        <span class="icon icon-fire"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">温暖的壁炉</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://m701.music.126.net/20230405224608/abfc2aa41418e7471cd28c852a6e5608/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/8174214960/2cec/9d72/af6f/5723f679e32bac97c3eb562ce1143a0a.mp3">
+                        <source type="audio/mpeg" src="https://music.163.com/song/media/outer/url?id=1833954222.mp3">
+                    </audio>
+                </li>
+                
+                <li data-sound="night">
+                    <div class="sound-icon">
+                        <span class="icon icon-night"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">夜晚的海滩</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://m701.music.126.net/20230405214310/437c0925b2277d5e32b1604c63692690/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/9540836528/5c0e/2a4f/df93/a4d79044bd33954c8fec4e70dedf5295.mp3">
+                        <source type="audio/mpeg" src="https://music.163.com/song/media/outer/url?id=1855794357.mp3">
+                    </audio>
+                </li>
+                
+                <li data-sound="forest">
+                    <div class="sound-icon">
+                        <span class="icon icon-forest"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">雨中的森林</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://m801.music.126.net/20230405214943/29d1845fe5e78f9c25153b7760fb11e7/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/9558299172/ce99/0e6a/4fd7/2e751df96ef12cc60148c8c167c844eb.mp3">
+                        <source type="audio/mpeg" src="https://music.163.com/song/media/outer/url?id=1856052234.mp3">
+                    </audio>
+                </li>
+                <li data-sound="coffee">
+                    <div class="sound-icon">
+                        <span class="icon icon-coffee"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">自习钢琴室</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://m10.music.126.net/20230405223256/6e359ccdcb798ad34ab3450785053dad/ymusic/070b/545a/555c/0a5b2dcbc6c0b3bbd459b65e3d0a9da8.mp3">
+                        <source type="audio/mpeg" src="https://music.163.com/song/media/outer/url?id=1310317451.mp3">
+                    </audio>
+                </li>
+
+                <li data-sound="leaves">
+                    <div class="sound-icon">
+                        <span class="icon icon-leaves"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">小鸟，溪流</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://yoyling.oss-cn-shenzhen.aliyuncs.com/files/relax/sound/ogg/leaves.ogg">
+                        <source type="audio/mpeg" src="https://sg-sycdn.kuwo.cn/f32ba5280a5d8bda3a03eb707fd6bd2e/642d7818/resource/n2/16/46/2946357523.mp3">
+                    </audio>
+                </li>
+                
+                <li data-sound="river">
+                    <div class="sound-icon">
+                        <span class="icon icon-river"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">河流中</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://music.163.com/song/media/outer/url?id=2026707634.mp3">
+                        <source type="audio/mpeg" src="https://m801.music.126.net/20230405220157/236e12822bab7c22232c9e2e19c931c4/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/25414467907/ed8a/3dba/ee0f/cd2a0102adea367cbb9ea66b72c22f3f.mp3">
+                    </audio>
+                </li>
+                
+                <li data-sound="fire">
+                    <div class="sound-icon">
+                        <span class="icon icon-farm "></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">农场</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://yoyling.oss-cn-shenzhen.aliyuncs.com/files/relax/sound/ogg/fire.ogg">
+                        <source type="audio/mpeg" src="https://lq-sycdn.kuwo.cn/729a9d28f736ca11995d23a916257e0a/642d7aab/resource/n1/23/23/2460732123.mp3">
+                    </audio>
+                </li>
+                
+                <li data-sound="seaside">
+                    <div class="sound-icon">
+                        <span class="icon icon-seaside"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">天空</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://m801.music.126.net/20230405223200/c90c665d1df535a1f82cfbc0e8173840/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/15484124274/c0f4/2ad1/da1a/6cf70f4e03386f744609ead657b67501.mp3">
+                        <source type="audio/mpeg" src="https://music.163.com/song/media/outer/url?id=1456353125.mp3">
+                    </audio>
+                </li>
+                
+                <li data-sound="yacht">
+                    <div class="sound-icon">
+                        <span class="icon icon-yacht"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">帆船</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://yoyling.oss-cn-shenzhen.aliyuncs.com/files/relax/sound/ogg/yacht.ogg">
+                        <source type="audio/mpeg" src="https://gg-sycdn.kuwo.cn/65b02546f7d3e410a422bad5a38a0211/642d7c75/resource/n3/57/98/2998918970.mp3">
+                    </audio>
+                </li>
+                
+                <li data-sound="train">
+                    <div class="sound-icon">
+                        <span class="icon icon-train"></span>
+                    </div>
+
+                    <div class="control-block">
+                        <h4 class="title">晚安世界</h4>
+                        <div class="control-bar">
+                            <span class="slider"></span>
+                        </div>
+                    </div>
+
+                    <audio preload="none" loop>
+                        <source type="audio/ogg" src="https://music.163.com/song/media/outer/url?id=1314987832.mp3">
+                        <source type="audio/mpeg" src="https://m10.music.126.net/20230405222938/ecb2cebb0f50712d261144fe673561af/ymusic/a4eb/0a35/5c73/9cc26199d666543c14db5e263c4b0b53.mp3">
+                    </audio>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <script>
+        (function (window) {
+            // Define variables for requestAnimationFrame and cancelAnimationFrame
+            var vendors = ['ms', 'moz', 'webkit', 'o'];
+            // Loop through the vendor prefixes and try to get the requestAnimationFrame and cancelAnimationFrame functions
+            for (var i = 0; i < vendors.length && !window.requestAnimationFrame; ++i) {
+                window.requestAnimationFrame = window[vendors[i] + 'RequestAnimationFrame'];
+                window.cancelAnimationFrame = window[vendors[i] + 'CancelAnimationFrame'] || window[vendors[i] + 'CancelRequestAnimationFrame'];
+            }
+            // If requestAnimationFrame is not available, polyfill it
+            if (!window.requestAnimationFrame) {
+                window.requestAnimationFrame = function (callback) {
+                    return setTimeout(callback, 16);
+                };
+            }
+            // If cancelAnimationFrame is not available, polyfill it
+            if (!window.cancelAnimationFrame) {
+                window.cancelAnimationFrame = function (id) {
+                    clearTimeout(id);
+                };
+            }
+        })(window);
+    </script>
+    <script src="./js/bubble_bg.js"></script>
+    <script src="./js/sound.js"></script>
+</body>
+</html>
